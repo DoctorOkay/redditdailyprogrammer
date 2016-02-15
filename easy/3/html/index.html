@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ceaser Cipher</title>
+</head>
+<body>
+  <h2>Ceaser Cipher</h2>
+  <div class="instructions">
+    <h3>Instructions</h3>
+    <p>Welcome to cipher day!</p>
+    <p>write a program that can encrypt texts with an alphabetical caesar cipher. This cipher can ignore numbers, symbols, and whitespace.</p>
+    <p>for extra credit, add a "decrypt" function to your program!</p>
+  </div>
+  <hr>
+  <div class="program">
+    <h3>Program</h3>
+    <form id="encrypt-form">
+      <div>
+        <label for="shift">Shift Size:</label>
+        <input type="number" min="0" max="25" id="shift" value="0">
+      </div>
+      <div>
+        <label for="plaintext">Text:</label>
+        <input type="text" id="plaintext">
+      </div>
+      <input type="submit">
+    </form>
+  </div>
+  <p id="ciphertext">This is the ciphertext</p>
+  <p><a href="../../../index.html">Back</a>
+  <script type="text/javascript" src="cipher.js"></script>
+
+</body>
+</html>

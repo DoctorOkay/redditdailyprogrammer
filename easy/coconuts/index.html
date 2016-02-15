@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How Many Coconuts?</title>
+</head>
+<body>
+  <div class="instructions">
+    <h2>Description</h2>
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/U9qU20VmvaU" frameborder="0" allowfullscreen></iframe>
+    <p>A number of sailors (let's call it N) are stranded on an island with a huge pile of coconuts and a monkey. During the night, each sailor (in turn) does the following without the others knowing:</p>
+    <p>He takes one N'th (e.g. if N=5, one fifth) of the coconuts in the pile and hides them</p>
+    <p>The division leaves one coconut left over, which is given to the monkey.</p>
+    <p>In the morning, they split the remaining coconuts between them. This time the split is even. There's nothing left over for the monkey.</p>
+    <p>Your task: Given the number of sailors (N), how many coconuts were in the pile to begin with (lowest possible number)?</p>
+
+    <h2>Formal inputs/outputs</h2>
+    <h3>Input</h3>
+    <p>The input is a single number: N, the number of sailors. This number is a whole number that is greater than or equal to 2.</p>
+    <h3>Output</h3>
+
+    <p>The output is a single number: the number of coconuts in the original pile.</p>
+    <p>Sample input/output</p>
+
+    <h3>Input:</h3>
+    <p>5</p>
+    <h3>Output:</h3>
+    <p>3121</p>
+
+    <hr>
+
+    <h2>Program</h2>
+    <label>How many sailors?</label>
+    <input type="text" id="sailor-number">
+    <button id="calculate-coconuts">Calculate</button>
+    <script src="coconuts.js"></script>
+  </div>
+</body>
+</html>

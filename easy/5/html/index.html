@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Program</title>
+</head>
+<body>
+  <h2>Login:</h2>
+  <h3>Instructions</h3>
+  <p>Your challenge for today is to create a program which is password protected, and wont open unless the correct user and password is given.</p>
+  <p>For extra credit, have the user and password in a seperate .txt file.</p>
+  <p>for even more extra credit, break into your own program :)</p>
+  <hr>
+  <h3>Program</h3>
+  <form id="login">
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+    <input type="submit">
+  </form>
+  <p><a href="../../../index.html">Back</a>
+  <script type="text/javascript">
+    var validUser = "bill";
+    var validPassword = "12345";
+
+    window.onload = function () {
+        console.log("window loaded");
+        document.getElementById("login").addEventListener("submit", checkPassword, false);
+      }
+
+    function checkPassword (e) {
+      e.preventDefault();
+
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      if (user == validUser && pass == validPassword) {
+        while (document.body.firstChild) {
+          document.body.removeChild(document.body.firstChild);
+        }
+
+        var successMsg = document.createElement("h1");
+        successMsg.innerText = "Welcome! You're in";
+        document.body.appendChild(successMsg);
+
+      } else {
+        var failMessage = document.createElement('p');
+        failMessage.class = "fail-message";
+        failMessage.innerText = "Sorry, that is not the right user/password combo";
+        document.body.appendChild(failMessage);
+      }
+
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Easy Challenge Two</title>
+</head>
+<body>
+  <h2>Useful Calculator</h2>
+  <h3>Instructions:</h3>
+  <p>Hello, coders! An important part of programming is being able to apply your programs, so your challenge for today is to create a calculator application that has use in your life. It might be an interest calculator, or it might be something that you can use in the classroom. For example, if you were in physics class, you might want to make a F = M * A calc.</p>
+  <p>EXTRA CREDIT: make the calculator have multiple functions! Not only should it be able to calculate F = M * A, but also A = F/M, and M = F/A!</p>
+  <hr>
+  <!-- P^2 = SA^3 -->
+  <h3>Program:</h3>
+  <h4>Planetary Distance Calculator (Kepler's 3rd Law)</h4>
+  <form id="period-calculator">
+    <div>
+      <p>Choose Cacluation Type</p>
+      <label>Period:</label>
+      <input type="radio" name="calculation" id="calc-period" value="period" checked="true">
+      <label>Semimajor Axis:</label>
+      <input type="radio" name="calculation" id="calc-sa" value="semimajor-axis">
+    </div>
+    <div>
+      <p>Enter
+      <label for="period">Period:</label>
+      <input type="number" id="period" min="0" value="0" step="any">
+      <label for="semimajor-axis">Semimajor Axis:</label>
+      <input type="number" id="semimajor-axis" min="0" value="0" step="any">
+    </div>
+    <div>
+      <input type="submit" value="calculate">
+    </div>
+  </form>
+  <p><a href="../../../index.html">Back</a>
+  <script>
+    window.onload = function() {
+      document.getElementById("period-calculator").addEventListener("submit", planetCalculate, false);
+      var radios = document.getElementsByName("calculation")
+      for (i=0; i < radios.length; i++) {
+        radios[i].addEventListener("click", changeCalc);
+      }
+    }
+
+    function changeCalc() {
+
+
+    }
+
+    function planetCalculate(e) {
+      e.preventDefault();
+
+      var period = document.getElementById("period").value;
+      var semimajorAxis = document.getElementById("semimajor-axis").value;
+      var calcType = document.querySelector('input[name="calculation"]:checked').value;
+
+      //determine which calculation to do, p^2/3 or sa^3/2
+      if (calcType == "period") {
+        period = Math.pow(semimajorAxis, 3/2);
+      } else {
+        semimajorAxis = Math.pow(period, 2/3);
+      }
+
+      document.getElementById("period").value = period;
+      document.getElementById("semimajor-axis").value = semimajorAxis;
+
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Easy Challenge One</title>
+</head>
+<body>
+  <h2>Hello Reddit</h2>
+  <h3>Instructions:</h3>
+  <p>create a program that will ask the users name, age, and reddit username. have it tell them the information back, in the format:</p>
+  <p>your name is (blank), you are (blank) years old, and your username is (blank)</p>
+  <p>for extra credit, have the program log this information in a file to be accessed later.</p>
+  <hr>
+  <h3>Program</h3>
+  <form id="hello-form" onsubmit="return displayName()">
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label>Age:</label>
+    <input type="text" id="age">
+    <label>Username:</label>
+    <input type="text" id="username">
+    <input type="submit">
+  </form>
+
+  <p class="hello">Your name is (name), you are (blank) years old, and your reddit username is (blank)</p>
+  <p><a href="../../../index.html">Back</a>
+  <script src="js/display.js"></script>
+</body>
+</html>

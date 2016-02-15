@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+</head>
+<body>
+  <h2>Terrible Password Generator, do not use</h2>
+  <div>
+    <h3>Instructions</h3>
+    <p>You're challenge for today is to create a random password generator!</p>
+    <p>For extra credit, allow the user to specify the amount of passwords to generate.</p>
+    <p>For even more extra credit, allow the user to specify the length of the strings he wants to generate</p>
+  </div>
+  <hr>
+  <div>
+    <h3>Program</h3>
+    <label for="pass-len">Password Length:</label>
+    <input type="number" min="5" max="25" value="5" id="pass-len">
+    <label for="pass-num">Number of Passwords:</label>
+    <input type="number" min="1" max="10" value="1" id="pass-num">
+    <button id="gen-password">Generate Password!</button>
+  </div>  <!-- <p id="password">Password goes here</p> -->
+  <div id="passwords"></div>
+  <p><a href="../../../index.html">Back</a>
+  <script src="js/script.js"></script>
+</body>
+</html>
